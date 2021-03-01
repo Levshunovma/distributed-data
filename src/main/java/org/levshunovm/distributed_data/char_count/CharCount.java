@@ -1,4 +1,4 @@
-package org.levshunovm.distributedData.charCount;
+package org.levshunovm.distributed_data.char_count;
 
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.Path;

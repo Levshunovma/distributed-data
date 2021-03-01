@@ -1,4 +1,4 @@
-package org.levshunovm.distributedData.charCount;
+package org.levshunovm.distributed_data.char_count;
 
 import com.google.common.collect.ImmutableList;
 import org.apache.hadoop.io.IntWritable;
