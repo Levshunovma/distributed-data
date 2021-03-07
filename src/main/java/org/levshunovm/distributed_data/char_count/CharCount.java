@@ -9,7 +9,6 @@ import org.apache.hadoop.mapreduce.lib.input.FileInputFormat;
 import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
 
 public class CharCount {
-
     public static void main(String[] args) throws Exception {
         Configuration conf = new Configuration();
 //        conf.set(MRJobConfig.NUM_MAPS, "10");
