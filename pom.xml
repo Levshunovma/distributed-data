@@ -13,6 +13,8 @@
         <maven.compiler.target>8</maven.compiler.target>
         <hadoop.version>2.6.5</hadoop.version>
         <mrunit.version>1.1.0</mrunit.version>
+        <spark.version>2.4.7</spark.version>
+        <scala.version>2.11</scala.version>
     </properties>
     
     <dependencies>
@@ -32,6 +34,11 @@
             <version>${mrunit.version}</version>
             <classifier>hadoop2</classifier>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.spark</groupId>
+            <artifactId>spark-core_${scala.version}</artifactId>
+            <version>${spark.version}</version>
         </dependency>
     </dependencies>
 </project>

@@ -1,0 +1,290 @@
+[root@sandbox-hdp task6]# /usr/hdp/2.6.5.0-292/spark2/bin/spark-submit --class org.levshunovm.distributed_data.spark.join.SparkJoin --master yarn task6.jar /user/root/task4/input1 /user/root/task4/input2 /user/root/task6/output
+21/03/21 19:57:05 INFO SparkContext: Running Spark version 2.3.0.2.6.5.0-292
+21/03/21 19:57:05 INFO SparkContext: Submitted application: ReduceSideJoin
+21/03/21 19:57:06 INFO SecurityManager: Changing view acls to: root
+21/03/21 19:57:06 INFO SecurityManager: Changing modify acls to: root
+21/03/21 19:57:06 INFO SecurityManager: Changing view acls groups to:
+21/03/21 19:57:06 INFO SecurityManager: Changing modify acls groups to:
+21/03/21 19:57:06 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root); groups with view permissions: Set(); users  with modify permissions: Set(root); groups with modify permissions: Set()
+21/03/21 19:57:07 INFO Utils: Successfully started service 'sparkDriver' on port 39227.
+21/03/21 19:57:07 INFO SparkEnv: Registering MapOutputTracker
+21/03/21 19:57:07 INFO SparkEnv: Registering BlockManagerMaster
+21/03/21 19:57:07 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+21/03/21 19:57:07 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+21/03/21 19:57:07 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-e9702831-5893-4ade-9583-f0455db23e79
+21/03/21 19:57:08 INFO MemoryStore: MemoryStore started with capacity 366.3 MB
+21/03/21 19:57:08 INFO SparkEnv: Registering OutputCommitCoordinator
+21/03/21 19:57:08 INFO log: Logging initialized @8571ms
+21/03/21 19:57:09 INFO Server: jetty-9.3.z-SNAPSHOT
+21/03/21 19:57:09 INFO Server: Started @9058ms
+21/03/21 19:57:09 INFO AbstractConnector: Started ServerConnector@f645fe8{HTTP/1.1,[http/1.1]}{0.0.0.0:4040}
+21/03/21 19:57:09 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+21/03/21 19:57:09 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@42deb43a{/jobs,null,AVAILABLE,@Spark}
+21/03/21 19:57:09 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@57a4d5ee{/jobs/json,null,AVAILABLE,@Spark}
+21/03/21 19:57:09 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@5af5def9{/jobs/job,null,AVAILABLE,@Spark}
+21/03/21 19:57:09 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@36dce7ed{/jobs/job/json,null,AVAILABLE,@Spark}
+21/03/21 19:57:09 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@47a64f7d{/stages,null,AVAILABLE,@Spark}
+21/03/21 19:57:09 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@33d05366{/stages/json,null,AVAILABLE,@Spark}
+21/03/21 19:57:09 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@27a0a5a2{/stages/stage,null,AVAILABLE,@Spark}
+21/03/21 19:57:09 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@32c0915e{/stages/stage/json,null,AVAILABLE,@Spark}
+21/03/21 19:57:09 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@106faf11{/stages/pool,null,AVAILABLE,@Spark}
+21/03/21 19:57:09 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@70f43b45{/stages/pool/json,null,AVAILABLE,@Spark}
+21/03/21 19:57:09 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@26d10f2e{/storage,null,AVAILABLE,@Spark}
+21/03/21 19:57:09 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@10ad20cb{/storage/json,null,AVAILABLE,@Spark}
+21/03/21 19:57:09 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@7dd712e8{/storage/rdd,null,AVAILABLE,@Spark}
+21/03/21 19:57:09 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@2c282004{/storage/rdd/json,null,AVAILABLE,@Spark}
+21/03/21 19:57:09 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@22ee2d0{/environment,null,AVAILABLE,@Spark}
+21/03/21 19:57:09 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@7bfc3126{/environment/json,null,AVAILABLE,@Spark}
+21/03/21 19:57:09 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@3e792ce3{/executors,null,AVAILABLE,@Spark}
+21/03/21 19:57:09 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@53bc1328{/executors/json,null,AVAILABLE,@Spark}
+21/03/21 19:57:09 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@26f143ed{/executors/threadDump,null,AVAILABLE,@Spark}
+21/03/21 19:57:09 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@3c1e3314{/executors/threadDump/json,null,AVAILABLE,@Spark}
+21/03/21 19:57:09 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@4b770e40{/static,null,AVAILABLE,@Spark}
+21/03/21 19:57:09 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@3f3c966c{/,null,AVAILABLE,@Spark}
+21/03/21 19:57:09 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@11ee02f8{/api,null,AVAILABLE,@Spark}
+21/03/21 19:57:09 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@5b69fd74{/jobs/job/kill,null,AVAILABLE,@Spark}
+21/03/21 19:57:09 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@f325091{/stages/stage/kill,null,AVAILABLE,@Spark}
+21/03/21 19:57:09 INFO SparkUI: Bound SparkUI to 0.0.0.0, and started at http://sandbox-hdp.hortonworks.com:4040
+21/03/21 19:57:10 INFO SparkContext: Added JAR file:/root/task6/task6.jar at spark://sandbox-hdp.hortonworks.com:39227/jars/task6.jar with timestamp 1616356630085
+21/03/21 19:57:12 INFO RMProxy: Connecting to ResourceManager at sandbox-hdp.hortonworks.com/172.18.0.3:8032
+21/03/21 19:57:13 INFO Client: Requesting a new application from cluster with 1 NodeManagers
+21/03/21 19:57:13 INFO Client: Verifying our application has not requested more than the maximum memory capability of the cluster (2250 MB per container)
+21/03/21 19:57:13 INFO Client: Will allocate AM container, with 896 MB memory including 384 MB overhead
+21/03/21 19:57:13 INFO Client: Setting up container launch context for our AM
+21/03/21 19:57:13 INFO Client: Setting up the launch environment for our AM container
+21/03/21 19:57:13 INFO Client: Preparing resources for our AM container
+21/03/21 19:57:16 INFO Client: Use hdfs cache file as spark.yarn.archive for HDP, hdfsCacheFile:hdfs://sandbox-hdp.hortonworks.com:8020/hdp/apps/2.6.5.0-292/spark2/spark2-hdp-yarn-archive.tar.gz
+21/03/21 19:57:16 INFO Client: Source and destination file systems are the same. Not copying hdfs://sandbox-hdp.hortonworks.com:8020/hdp/apps/2.6.5.0-292/spark2/spark2-hdp-yarn-archive.tar.gz
+21/03/21 19:57:17 INFO Client: Uploading resource file:/tmp/spark-f1b03438-d850-4386-b5ba-14b2f58421d5/__spark_conf__3370035719769963080.zip -> hdfs://sandbox-hdp.hortonworks.com:8020/user/root/.sparkStaging/application_1616353819533_0002/__spark_conf__.zip
+21/03/21 19:57:18 INFO SecurityManager: Changing view acls to: root
+21/03/21 19:57:18 INFO SecurityManager: Changing modify acls to: root
+21/03/21 19:57:18 INFO SecurityManager: Changing view acls groups to:
+21/03/21 19:57:18 INFO SecurityManager: Changing modify acls groups to:
+21/03/21 19:57:18 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root); groups with view permissions: Set(); users  with modify permissions: Set(root); groups with modify permissions: Set()
+21/03/21 19:57:18 INFO Client: Submitting application application_1616353819533_0002 to ResourceManager
+21/03/21 19:57:18 INFO YarnClientImpl: Submitted application application_1616353819533_0002
+21/03/21 19:57:19 INFO SchedulerExtensionServices: Starting Yarn extension services with app application_1616353819533_0002 and attemptId None
+21/03/21 19:57:20 INFO Client: Application report for application_1616353819533_0002 (state: ACCEPTED)
+21/03/21 19:57:20 INFO Client:
+	 client token: N/A
+	 diagnostics: AM container is launched, waiting for AM container to Register with RM
+	 ApplicationMaster host: N/A
+	 ApplicationMaster RPC port: -1
+	 queue: default
+	 start time: 1616356638784
+	 final status: UNDEFINED
+	 tracking URL: http://sandbox-hdp.hortonworks.com:8088/proxy/application_1616353819533_0002/
+	 user: root
+21/03/21 19:57:21 INFO Client: Application report for application_1616353819533_0002 (state: ACCEPTED)
+21/03/21 19:57:22 INFO Client: Application report for application_1616353819533_0002 (state: ACCEPTED)
+21/03/21 19:57:23 INFO Client: Application report for application_1616353819533_0002 (state: ACCEPTED)
+21/03/21 19:57:24 INFO Client: Application report for application_1616353819533_0002 (state: ACCEPTED)
+21/03/21 19:57:25 INFO Client: Application report for application_1616353819533_0002 (state: ACCEPTED)
+21/03/21 19:57:26 INFO Client: Application report for application_1616353819533_0002 (state: ACCEPTED)
+21/03/21 19:57:27 INFO Client: Application report for application_1616353819533_0002 (state: ACCEPTED)
+21/03/21 19:57:28 INFO Client: Application report for application_1616353819533_0002 (state: ACCEPTED)
+21/03/21 19:57:29 INFO Client: Application report for application_1616353819533_0002 (state: ACCEPTED)
+21/03/21 19:57:30 INFO Client: Application report for application_1616353819533_0002 (state: ACCEPTED)
+21/03/21 19:57:31 INFO Client: Application report for application_1616353819533_0002 (state: ACCEPTED)
+21/03/21 19:57:32 INFO Client: Application report for application_1616353819533_0002 (state: ACCEPTED)
+21/03/21 19:57:33 INFO Client: Application report for application_1616353819533_0002 (state: ACCEPTED)
+21/03/21 19:57:34 INFO Client: Application report for application_1616353819533_0002 (state: ACCEPTED)
+21/03/21 19:57:35 INFO Client: Application report for application_1616353819533_0002 (state: ACCEPTED)
+21/03/21 19:57:36 INFO Client: Application report for application_1616353819533_0002 (state: ACCEPTED)
+21/03/21 19:57:37 INFO Client: Application report for application_1616353819533_0002 (state: ACCEPTED)
+21/03/21 19:57:38 INFO Client: Application report for application_1616353819533_0002 (state: ACCEPTED)
+21/03/21 19:57:39 INFO Client: Application report for application_1616353819533_0002 (state: ACCEPTED)
+21/03/21 19:57:39 INFO YarnClientSchedulerBackend: Add WebUI Filter. org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter, Map(PROXY_HOSTS -> sandbox-hdp.hortonworks.com, PROXY_URI_BASES -> http://sandbox-hdp.hortonworks.com:8088/proxy/application_1616353819533_0002), /proxy/application_1616353819533_0002
+21/03/21 19:57:39 INFO JettyUtils: Adding filter: org.apache.hadoop.yarn.server.webproxy.amfilter.AmIpFilter
+21/03/21 19:57:40 INFO Client: Application report for application_1616353819533_0002 (state: ACCEPTED)
+21/03/21 19:57:40 INFO YarnSchedulerBackend$YarnSchedulerEndpoint: ApplicationMaster registered as NettyRpcEndpointRef(spark-client://YarnAM)
+21/03/21 19:57:41 INFO Client: Application report for application_1616353819533_0002 (state: RUNNING)
+21/03/21 19:57:41 INFO Client:
+	 client token: N/A
+	 diagnostics: N/A
+	 ApplicationMaster host: 172.18.0.3
+	 ApplicationMaster RPC port: 0
+	 queue: default
+	 start time: 1616356638784
+	 final status: UNDEFINED
+	 tracking URL: http://sandbox-hdp.hortonworks.com:8088/proxy/application_1616353819533_0002/
+	 user: root
+21/03/21 19:57:41 INFO YarnClientSchedulerBackend: Application application_1616353819533_0002 has started running.
+21/03/21 19:57:41 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 34003.
+21/03/21 19:57:41 INFO NettyBlockTransferService: Server created on sandbox-hdp.hortonworks.com:34003
+21/03/21 19:57:41 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+21/03/21 19:57:41 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, sandbox-hdp.hortonworks.com, 34003, None)
+21/03/21 19:57:41 INFO BlockManagerMasterEndpoint: Registering block manager sandbox-hdp.hortonworks.com:34003 with 366.3 MB RAM, BlockManagerId(driver, sandbox-hdp.hortonworks.com, 34003, None)
+21/03/21 19:57:41 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, sandbox-hdp.hortonworks.com, 34003, None)
+21/03/21 19:57:41 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, sandbox-hdp.hortonworks.com, 34003, None)
+21/03/21 19:57:42 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@69a5c6be{/metrics/json,null,AVAILABLE,@Spark}
+21/03/21 19:57:44 INFO EventLoggingListener: Logging events to hdfs:/spark2-history/application_1616353819533_0002
+21/03/21 19:57:44 INFO YarnClientSchedulerBackend: SchedulerBackend is ready for scheduling beginning after waiting maxRegisteredResourcesWaitingTime: 30000(ms)
+21/03/21 19:57:46 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 360.1 KB, free 365.9 MB)
+21/03/21 19:57:47 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 32.2 KB, free 365.9 MB)
+21/03/21 19:57:47 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on sandbox-hdp.hortonworks.com:34003 (size: 32.2 KB, free: 366.3 MB)
+21/03/21 19:57:47 INFO SparkContext: Created broadcast 0 from textFile at SparkJoin.java:16
+21/03/21 19:57:47 INFO MemoryStore: Block broadcast_1 stored as values in memory (estimated size 360.2 KB, free 365.6 MB)
+21/03/21 19:57:47 INFO MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 32.2 KB, free 365.5 MB)
+21/03/21 19:57:47 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on sandbox-hdp.hortonworks.com:34003 (size: 32.2 KB, free: 366.2 MB)
+21/03/21 19:57:47 INFO SparkContext: Created broadcast 1 from textFile at SparkJoin.java:17
+21/03/21 19:57:47 INFO FileInputFormat: Total input paths to process : 1
+21/03/21 19:57:48 INFO FileInputFormat: Total input paths to process : 1
+21/03/21 19:57:49 INFO SparkContext: Starting job: sortBy at SparkJoin.java:26
+21/03/21 19:57:49 INFO DAGScheduler: Registering RDD 5 (mapToPair at SparkJoin.java:34)
+21/03/21 19:57:49 INFO DAGScheduler: Registering RDD 8 (mapToPair at SparkJoin.java:34)
+21/03/21 19:57:49 INFO DAGScheduler: Got job 0 (sortBy at SparkJoin.java:26) with 2 output partitions
+21/03/21 19:57:49 INFO DAGScheduler: Final stage: ResultStage 2 (sortBy at SparkJoin.java:26)
+21/03/21 19:57:49 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 0, ShuffleMapStage 1)
+21/03/21 19:57:49 INFO DAGScheduler: Missing parents: List(ShuffleMapStage 0, ShuffleMapStage 1)
+21/03/21 19:57:49 INFO DAGScheduler: Submitting ShuffleMapStage 0 (MapPartitionsRDD[5] at mapToPair at SparkJoin.java:34), which has no missing parents
+21/03/21 19:57:49 INFO MemoryStore: Block broadcast_2 stored as values in memory (estimated size 6.0 KB, free 365.5 MB)
+21/03/21 19:57:49 INFO MemoryStore: Block broadcast_2_piece0 stored as bytes in memory (estimated size 3.3 KB, free 365.5 MB)
+21/03/21 19:57:49 INFO BlockManagerInfo: Added broadcast_2_piece0 in memory on sandbox-hdp.hortonworks.com:34003 (size: 3.3 KB, free: 366.2 MB)
+21/03/21 19:57:49 INFO SparkContext: Created broadcast 2 from broadcast at DAGScheduler.scala:1039
+21/03/21 19:57:49 INFO DAGScheduler: Submitting 2 missing tasks from ShuffleMapStage 0 (MapPartitionsRDD[5] at mapToPair at SparkJoin.java:34) (first 15 tasks are for partitions Vector(0, 1))
+21/03/21 19:57:49 INFO YarnScheduler: Adding task set 0.0 with 2 tasks
+21/03/21 19:57:50 INFO DAGScheduler: Submitting ShuffleMapStage 1 (MapPartitionsRDD[8] at mapToPair at SparkJoin.java:34), which has no missing parents
+21/03/21 19:57:50 INFO MemoryStore: Block broadcast_3 stored as values in memory (estimated size 6.0 KB, free 365.5 MB)
+21/03/21 19:57:50 INFO MemoryStore: Block broadcast_3_piece0 stored as bytes in memory (estimated size 3.3 KB, free 365.5 MB)
+21/03/21 19:57:50 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on sandbox-hdp.hortonworks.com:34003 (size: 3.3 KB, free: 366.2 MB)
+21/03/21 19:57:50 INFO SparkContext: Created broadcast 3 from broadcast at DAGScheduler.scala:1039
+21/03/21 19:57:50 INFO DAGScheduler: Submitting 2 missing tasks from ShuffleMapStage 1 (MapPartitionsRDD[8] at mapToPair at SparkJoin.java:34) (first 15 tasks are for partitions Vector(0, 1))
+21/03/21 19:57:50 INFO YarnScheduler: Adding task set 1.0 with 2 tasks
+21/03/21 19:57:54 INFO YarnSchedulerBackend$YarnDriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (172.18.0.3:58176) with ID 1
+21/03/21 19:57:54 INFO TaskSetManager: Starting task 0.0 in stage 0.0 (TID 0, sandbox-hdp.hortonworks.com, executor 1, partition 0, NODE_LOCAL, 7919 bytes)
+21/03/21 19:57:54 INFO BlockManagerMasterEndpoint: Registering block manager sandbox-hdp.hortonworks.com:44293 with 366.3 MB RAM, BlockManagerId(1, sandbox-hdp.hortonworks.com, 44293, None)
+21/03/21 19:57:55 INFO BlockManagerInfo: Added broadcast_2_piece0 in memory on sandbox-hdp.hortonworks.com:44293 (size: 3.3 KB, free: 366.3 MB)
+21/03/21 19:57:56 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on sandbox-hdp.hortonworks.com:44293 (size: 32.2 KB, free: 366.3 MB)
+21/03/21 19:58:01 INFO TaskSetManager: Starting task 1.0 in stage 0.0 (TID 1, sandbox-hdp.hortonworks.com, executor 1, partition 1, NODE_LOCAL, 7919 bytes)
+21/03/21 19:58:01 INFO TaskSetManager: Finished task 0.0 in stage 0.0 (TID 0) in 6846 ms on sandbox-hdp.hortonworks.com (executor 1) (1/2)
+21/03/21 19:58:01 INFO TaskSetManager: Starting task 0.0 in stage 1.0 (TID 2, sandbox-hdp.hortonworks.com, executor 1, partition 0, NODE_LOCAL, 7919 bytes)
+21/03/21 19:58:01 INFO TaskSetManager: Finished task 1.0 in stage 0.0 (TID 1) in 604 ms on sandbox-hdp.hortonworks.com (executor 1) (2/2)
+21/03/21 19:58:01 INFO YarnScheduler: Removed TaskSet 0.0, whose tasks have all completed, from pool
+21/03/21 19:58:01 INFO DAGScheduler: ShuffleMapStage 0 (mapToPair at SparkJoin.java:34) finished in 11.888 s
+21/03/21 19:58:01 INFO DAGScheduler: looking for newly runnable stages
+21/03/21 19:58:01 INFO DAGScheduler: running: Set(ShuffleMapStage 1)
+21/03/21 19:58:01 INFO DAGScheduler: waiting: Set(ResultStage 2)
+21/03/21 19:58:01 INFO DAGScheduler: failed: Set()
+21/03/21 19:58:01 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on sandbox-hdp.hortonworks.com:44293 (size: 3.3 KB, free: 366.3 MB)
+21/03/21 19:58:01 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on sandbox-hdp.hortonworks.com:44293 (size: 32.2 KB, free: 366.2 MB)
+21/03/21 19:58:02 INFO TaskSetManager: Starting task 1.0 in stage 1.0 (TID 3, sandbox-hdp.hortonworks.com, executor 1, partition 1, NODE_LOCAL, 7919 bytes)
+21/03/21 19:58:02 INFO TaskSetManager: Finished task 0.0 in stage 1.0 (TID 2) in 523 ms on sandbox-hdp.hortonworks.com (executor 1) (1/2)
+21/03/21 19:58:02 INFO TaskSetManager: Finished task 1.0 in stage 1.0 (TID 3) in 244 ms on sandbox-hdp.hortonworks.com (executor 1) (2/2)
+21/03/21 19:58:02 INFO DAGScheduler: ShuffleMapStage 1 (mapToPair at SparkJoin.java:34) finished in 12.196 s
+21/03/21 19:58:02 INFO DAGScheduler: looking for newly runnable stages
+21/03/21 19:58:02 INFO DAGScheduler: running: Set()
+21/03/21 19:58:02 INFO DAGScheduler: waiting: Set(ResultStage 2)
+21/03/21 19:58:02 INFO DAGScheduler: failed: Set()
+21/03/21 19:58:02 INFO YarnScheduler: Removed TaskSet 1.0, whose tasks have all completed, from pool
+21/03/21 19:58:02 INFO DAGScheduler: Submitting ResultStage 2 (MapPartitionsRDD[18] at sortBy at SparkJoin.java:26), which has no missing parents
+21/03/21 19:58:02 INFO MemoryStore: Block broadcast_4 stored as values in memory (estimated size 6.8 KB, free 365.5 MB)
+21/03/21 19:58:02 INFO MemoryStore: Block broadcast_4_piece0 stored as bytes in memory (estimated size 3.4 KB, free 365.5 MB)
+21/03/21 19:58:02 INFO BlockManagerInfo: Added broadcast_4_piece0 in memory on sandbox-hdp.hortonworks.com:34003 (size: 3.4 KB, free: 366.2 MB)
+21/03/21 19:58:02 INFO SparkContext: Created broadcast 4 from broadcast at DAGScheduler.scala:1039
+21/03/21 19:58:02 INFO DAGScheduler: Submitting 2 missing tasks from ResultStage 2 (MapPartitionsRDD[18] at sortBy at SparkJoin.java:26) (first 15 tasks are for partitions Vector(0, 1))
+21/03/21 19:58:02 INFO YarnScheduler: Adding task set 2.0 with 2 tasks
+21/03/21 19:58:02 INFO TaskSetManager: Starting task 0.0 in stage 2.0 (TID 4, sandbox-hdp.hortonworks.com, executor 1, partition 0, NODE_LOCAL, 7899 bytes)
+21/03/21 19:58:02 INFO BlockManagerInfo: Added broadcast_4_piece0 in memory on sandbox-hdp.hortonworks.com:44293 (size: 3.4 KB, free: 366.2 MB)
+21/03/21 19:58:02 INFO MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 1 to 172.18.0.3:58176
+21/03/21 19:58:03 INFO MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 0 to 172.18.0.3:58176
+21/03/21 19:58:03 INFO TaskSetManager: Starting task 1.0 in stage 2.0 (TID 5, sandbox-hdp.hortonworks.com, executor 1, partition 1, NODE_LOCAL, 7899 bytes)
+21/03/21 19:58:03 INFO TaskSetManager: Finished task 0.0 in stage 2.0 (TID 4) in 966 ms on sandbox-hdp.hortonworks.com (executor 1) (1/2)
+21/03/21 19:58:03 INFO TaskSetManager: Finished task 1.0 in stage 2.0 (TID 5) in 301 ms on sandbox-hdp.hortonworks.com (executor 1) (2/2)
+21/03/21 19:58:03 INFO DAGScheduler: ResultStage 2 (sortBy at SparkJoin.java:26) finished in 1.349 s
+21/03/21 19:58:03 INFO YarnScheduler: Removed TaskSet 2.0, whose tasks have all completed, from pool
+21/03/21 19:58:03 INFO DAGScheduler: Job 0 finished: sortBy at SparkJoin.java:26, took 14.640480 s
+21/03/21 19:58:03 INFO deprecation: mapred.output.dir is deprecated. Instead, use mapreduce.output.fileoutputformat.outputdir
+21/03/21 19:58:04 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+21/03/21 19:58:04 INFO FileOutputCommitter: FileOutputCommitter skip cleanup _temporary folders under output directory:false, ignore cleanup failures: false
+21/03/21 19:58:04 INFO SparkContext: Starting job: runJob at SparkHadoopWriter.scala:78
+21/03/21 19:58:04 INFO DAGScheduler: Registering RDD 16 (sortBy at SparkJoin.java:26)
+21/03/21 19:58:04 INFO DAGScheduler: Got job 1 (runJob at SparkHadoopWriter.scala:78) with 10 output partitions
+21/03/21 19:58:04 INFO DAGScheduler: Final stage: ResultStage 6 (runJob at SparkHadoopWriter.scala:78)
+21/03/21 19:58:04 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 5)
+21/03/21 19:58:04 INFO DAGScheduler: Missing parents: List(ShuffleMapStage 5)
+21/03/21 19:58:04 INFO DAGScheduler: Submitting ShuffleMapStage 5 (MapPartitionsRDD[16] at sortBy at SparkJoin.java:26), which has no missing parents
+21/03/21 19:58:04 INFO MemoryStore: Block broadcast_5 stored as values in memory (estimated size 7.1 KB, free 365.5 MB)
+21/03/21 19:58:04 INFO MemoryStore: Block broadcast_5_piece0 stored as bytes in memory (estimated size 3.6 KB, free 365.5 MB)
+21/03/21 19:58:04 INFO BlockManagerInfo: Added broadcast_5_piece0 in memory on sandbox-hdp.hortonworks.com:34003 (size: 3.6 KB, free: 366.2 MB)
+21/03/21 19:58:04 INFO SparkContext: Created broadcast 5 from broadcast at DAGScheduler.scala:1039
+21/03/21 19:58:04 INFO DAGScheduler: Submitting 2 missing tasks from ShuffleMapStage 5 (MapPartitionsRDD[16] at sortBy at SparkJoin.java:26) (first 15 tasks are for partitions Vector(0, 1))
+21/03/21 19:58:04 INFO YarnScheduler: Adding task set 5.0 with 2 tasks
+21/03/21 19:58:04 INFO TaskSetManager: Starting task 0.0 in stage 5.0 (TID 6, sandbox-hdp.hortonworks.com, executor 1, partition 0, NODE_LOCAL, 7888 bytes)
+21/03/21 19:58:04 INFO BlockManagerInfo: Added broadcast_5_piece0 in memory on sandbox-hdp.hortonworks.com:44293 (size: 3.6 KB, free: 366.2 MB)
+21/03/21 19:58:04 INFO TaskSetManager: Starting task 1.0 in stage 5.0 (TID 7, sandbox-hdp.hortonworks.com, executor 1, partition 1, NODE_LOCAL, 7888 bytes)
+21/03/21 19:58:04 INFO TaskSetManager: Finished task 0.0 in stage 5.0 (TID 6) in 369 ms on sandbox-hdp.hortonworks.com (executor 1) (1/2)
+21/03/21 19:58:04 INFO TaskSetManager: Finished task 1.0 in stage 5.0 (TID 7) in 240 ms on sandbox-hdp.hortonworks.com (executor 1) (2/2)
+21/03/21 19:58:04 INFO DAGScheduler: ShuffleMapStage 5 (sortBy at SparkJoin.java:26) finished in 0.723 s
+21/03/21 19:58:04 INFO DAGScheduler: looking for newly runnable stages
+21/03/21 19:58:04 INFO DAGScheduler: running: Set()
+21/03/21 19:58:04 INFO DAGScheduler: waiting: Set(ResultStage 6)
+21/03/21 19:58:04 INFO DAGScheduler: failed: Set()
+21/03/21 19:58:04 INFO YarnScheduler: Removed TaskSet 5.0, whose tasks have all completed, from pool
+21/03/21 19:58:04 INFO DAGScheduler: Submitting ResultStage 6 (MapPartitionsRDD[21] at saveAsTextFile at SparkJoin.java:18), which has no missing parents
+21/03/21 19:58:04 INFO MemoryStore: Block broadcast_6 stored as values in memory (estimated size 93.6 KB, free 365.4 MB)
+21/03/21 19:58:04 INFO MemoryStore: Block broadcast_6_piece0 stored as bytes in memory (estimated size 35.3 KB, free 365.4 MB)
+21/03/21 19:58:04 INFO BlockManagerInfo: Added broadcast_6_piece0 in memory on sandbox-hdp.hortonworks.com:34003 (size: 35.3 KB, free: 366.2 MB)
+21/03/21 19:58:05 INFO SparkContext: Created broadcast 6 from broadcast at DAGScheduler.scala:1039
+21/03/21 19:58:05 INFO DAGScheduler: Submitting 10 missing tasks from ResultStage 6 (MapPartitionsRDD[21] at saveAsTextFile at SparkJoin.java:18) (first 15 tasks are for partitions Vector(0, 1, 2, 3, 4, 5, 6, 7, 8, 9))
+21/03/21 19:58:05 INFO YarnScheduler: Adding task set 6.0 with 10 tasks
+21/03/21 19:58:05 INFO TaskSetManager: Starting task 0.0 in stage 6.0 (TID 8, sandbox-hdp.hortonworks.com, executor 1, partition 0, NODE_LOCAL, 7660 bytes)
+21/03/21 19:58:05 INFO BlockManagerInfo: Added broadcast_6_piece0 in memory on sandbox-hdp.hortonworks.com:44293 (size: 35.3 KB, free: 366.2 MB)
+21/03/21 19:58:05 INFO MapOutputTrackerMasterEndpoint: Asked to send map output locations for shuffle 2 to 172.18.0.3:58176
+21/03/21 19:58:05 INFO TaskSetManager: Starting task 1.0 in stage 6.0 (TID 9, sandbox-hdp.hortonworks.com, executor 1, partition 1, NODE_LOCAL, 7660 bytes)
+21/03/21 19:58:05 INFO TaskSetManager: Finished task 0.0 in stage 6.0 (TID 8) in 866 ms on sandbox-hdp.hortonworks.com (executor 1) (1/10)
+21/03/21 19:58:06 INFO TaskSetManager: Starting task 2.0 in stage 6.0 (TID 10, sandbox-hdp.hortonworks.com, executor 1, partition 2, NODE_LOCAL, 7660 bytes)
+21/03/21 19:58:06 INFO TaskSetManager: Finished task 1.0 in stage 6.0 (TID 9) in 246 ms on sandbox-hdp.hortonworks.com (executor 1) (2/10)
+21/03/21 19:58:06 INFO TaskSetManager: Starting task 3.0 in stage 6.0 (TID 11, sandbox-hdp.hortonworks.com, executor 1, partition 3, NODE_LOCAL, 7660 bytes)
+21/03/21 19:58:06 INFO TaskSetManager: Finished task 2.0 in stage 6.0 (TID 10) in 167 ms on sandbox-hdp.hortonworks.com (executor 1) (3/10)
+21/03/21 19:58:06 INFO TaskSetManager: Starting task 4.0 in stage 6.0 (TID 12, sandbox-hdp.hortonworks.com, executor 1, partition 4, NODE_LOCAL, 7660 bytes)
+21/03/21 19:58:06 INFO TaskSetManager: Finished task 3.0 in stage 6.0 (TID 11) in 164 ms on sandbox-hdp.hortonworks.com (executor 1) (4/10)
+21/03/21 19:58:06 INFO TaskSetManager: Starting task 5.0 in stage 6.0 (TID 13, sandbox-hdp.hortonworks.com, executor 1, partition 5, NODE_LOCAL, 7660 bytes)
+21/03/21 19:58:06 INFO TaskSetManager: Finished task 4.0 in stage 6.0 (TID 12) in 245 ms on sandbox-hdp.hortonworks.com (executor 1) (5/10)
+21/03/21 19:58:06 INFO TaskSetManager: Starting task 6.0 in stage 6.0 (TID 14, sandbox-hdp.hortonworks.com, executor 1, partition 6, NODE_LOCAL, 7660 bytes)
+21/03/21 19:58:06 INFO TaskSetManager: Finished task 5.0 in stage 6.0 (TID 13) in 155 ms on sandbox-hdp.hortonworks.com (executor 1) (6/10)
+21/03/21 19:58:06 INFO TaskSetManager: Starting task 7.0 in stage 6.0 (TID 15, sandbox-hdp.hortonworks.com, executor 1, partition 7, NODE_LOCAL, 7660 bytes)
+21/03/21 19:58:06 INFO TaskSetManager: Finished task 6.0 in stage 6.0 (TID 14) in 167 ms on sandbox-hdp.hortonworks.com (executor 1) (7/10)
+21/03/21 19:58:07 INFO TaskSetManager: Starting task 8.0 in stage 6.0 (TID 16, sandbox-hdp.hortonworks.com, executor 1, partition 8, NODE_LOCAL, 7660 bytes)
+21/03/21 19:58:07 INFO TaskSetManager: Finished task 7.0 in stage 6.0 (TID 15) in 186 ms on sandbox-hdp.hortonworks.com (executor 1) (8/10)
+21/03/21 19:58:07 INFO TaskSetManager: Starting task 9.0 in stage 6.0 (TID 17, sandbox-hdp.hortonworks.com, executor 1, partition 9, NODE_LOCAL, 7660 bytes)
+21/03/21 19:58:07 INFO TaskSetManager: Finished task 8.0 in stage 6.0 (TID 16) in 177 ms on sandbox-hdp.hortonworks.com (executor 1) (9/10)
+21/03/21 19:58:07 INFO TaskSetManager: Finished task 9.0 in stage 6.0 (TID 17) in 180 ms on sandbox-hdp.hortonworks.com (executor 1) (10/10)
+21/03/21 19:58:07 INFO YarnScheduler: Removed TaskSet 6.0, whose tasks have all completed, from pool
+21/03/21 19:58:07 INFO DAGScheduler: ResultStage 6 (runJob at SparkHadoopWriter.scala:78) finished in 2.627 s
+21/03/21 19:58:07 INFO DAGScheduler: Job 1 finished: runJob at SparkHadoopWriter.scala:78, took 3.460795 s
+21/03/21 19:58:07 INFO SparkHadoopWriter: Job job_20210321195803_0021 committed.
+21/03/21 19:58:07 INFO SparkContext: Invoking stop() from shutdown hook
+21/03/21 19:58:07 INFO AbstractConnector: Stopped Spark@f645fe8{HTTP/1.1,[http/1.1]}{0.0.0.0:4040}
+21/03/21 19:58:07 INFO SparkUI: Stopped Spark web UI at http://sandbox-hdp.hortonworks.com:4040
+21/03/21 19:58:07 INFO YarnClientSchedulerBackend: Interrupting monitor thread
+21/03/21 19:58:08 INFO YarnClientSchedulerBackend: Shutting down all executors
+21/03/21 19:58:08 INFO YarnSchedulerBackend$YarnDriverEndpoint: Asking each executor to shut down
+21/03/21 19:58:08 INFO SchedulerExtensionServices: Stopping SchedulerExtensionServices
+(serviceOption=None,
+ services=List(),
+ started=false)
+21/03/21 19:58:08 INFO YarnClientSchedulerBackend: Stopped
+21/03/21 19:58:08 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+21/03/21 19:58:08 INFO MemoryStore: MemoryStore cleared
+21/03/21 19:58:08 INFO BlockManager: BlockManager stopped
+21/03/21 19:58:08 INFO BlockManagerMaster: BlockManagerMaster stopped
+21/03/21 19:58:08 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+21/03/21 19:58:08 INFO SparkContext: Successfully stopped SparkContext
+21/03/21 19:58:08 INFO ShutdownHookManager: Shutdown hook called
+21/03/21 19:58:08 INFO ShutdownHookManager: Deleting directory /tmp/spark-89ceab30-34ec-4750-86be-edc794ca69bf
+21/03/21 19:58:08 INFO ShutdownHookManager: Deleting directory /tmp/spark-f1b03438-d850-4386-b5ba-14b2f58421d5
+[root@sandbox-hdp task6]# hadoop fs -ls task6/output
+Found 11 items
+-rw-r--r--   1 root hdfs          0 2021-03-21 19:58 task6/output/_SUCCESS
+-rw-r--r--   1 root hdfs        158 2021-03-21 19:58 task6/output/part-00000
+-rw-r--r--   1 root hdfs        286 2021-03-21 19:58 task6/output/part-00001
+-rw-r--r--   1 root hdfs        504 2021-03-21 19:58 task6/output/part-00002
+-rw-r--r--   1 root hdfs       1067 2021-03-21 19:58 task6/output/part-00003
+-rw-r--r--   1 root hdfs       1590 2021-03-21 19:58 task6/output/part-00004
+-rw-r--r--   1 root hdfs       2619 2021-03-21 19:58 task6/output/part-00005
+-rw-r--r--   1 root hdfs       3200 2021-03-21 19:58 task6/output/part-00006
+-rw-r--r--   1 root hdfs       2366 2021-03-21 19:58 task6/output/part-00007
+-rw-r--r--   1 root hdfs       1626 2021-03-21 19:58 task6/output/part-00008
+-rw-r--r--   1 root hdfs       1048 2021-03-21 19:58 task6/output/part-00009
+[root@sandbox-hdp task6]# hadoop fs -cat task6/output/part-* > output.txt
