@@ -2,13 +2,13 @@ package org.levshunovm.distributed_data.spark.sql;
 
 import org.apache.spark.sql.Dataset;
 import org.apache.spark.sql.Encoders;
+import org.apache.spark.sql.SaveMode;
 import org.apache.spark.sql.SparkSession;
 import org.levshunovm.distributed_data.MapReduceUtils;
 
 import java.util.Arrays;
 
-import static org.apache.spark.sql.functions.col;
-import static org.apache.spark.sql.functions.length;
+import static org.apache.spark.sql.functions.*;
 
 public class SparkSqlJoin {
     public static void main(String[] args) {
@@ -22,7 +22,8 @@ public class SparkSqlJoin {
 
         file1.join(file2, file1.col("value").equalTo(file2.col("value")), "leftanti")
                 .sort(length(col("value")).desc())
-                .write().text(args[2] + "//utc_timestamp=" + startTime);
+                .withColumn("utc_timestamp", lit(startTime))
+                .write().partitionBy("utc_timestamp").mode(SaveMode.Append).text(args[2]);
     }
 
     public static Dataset<String> getWords(Dataset<String> file) {
